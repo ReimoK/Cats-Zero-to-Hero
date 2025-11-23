@@ -4,10 +4,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("UI")]
+    public ExperienceBar xpBar;
     public GameObject levelUpPanel;
     public GameObject winPanel;
     public GameObject losePanel;
 
+    [Header("Stats")]
     public float currentXP = 0f;
     public int currentLevel = 1;
     public float xpToNextLevel = 10f;
@@ -32,10 +35,19 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
     }
+    void Start()
+    {
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+    }
 
     public void AddXP(float amount)
     {
         currentXP += amount;
+
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+
         if (currentXP >= xpToNextLevel)
         {
             LevelUp();
@@ -60,12 +72,12 @@ public class GameManager : MonoBehaviour
         currentXP -= xpToNextLevel;
         xpToNextLevel *= 1.5f;
 
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+
         Time.timeScale = 0f;
 
-        if (levelUpPanel != null)
-        {
-            levelUpPanel.SetActive(true);
-        }
+        if (levelUpPanel != null) levelUpPanel.SetActive(true);
 
         if (currentXP >= xpToNextLevel)
         {
@@ -81,6 +93,7 @@ public class GameManager : MonoBehaviour
             levelUpPanel.SetActive(false);
         }
 
+        if (levelUpPanel != null) levelUpPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 
