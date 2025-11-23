@@ -1,66 +1,59 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Settings")]
     public GameObject enemyPrefab;
+    public GameObject bossPrefab;
     public float spawnRadius = 10f;
-    public float timeBetweenWaves = 5f;
 
-    [Header("Wave Config")]
-    public float currentSpawnRate = 1f;
-    public float spawnRateMultiplier = 0.1f;
+    [Header("Timing")]
+    public float bossSpawnTime = 60f; 
+    private bool bossSpawned = false;
 
     private float nextSpawnTime;
-    private float nextWaveTime;
     private Transform player;
-    private Vector2 screenBounds;
 
     void Start()
     {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            player = playerObj.transform;
-        }
-
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-
-        if (spawnRadius < screenBounds.x)
-        {
-            spawnRadius = screenBounds.x + 2f;
-        }
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null || bossSpawned) return;
+
+        if (Time.timeSinceLevelLoad >= bossSpawnTime)
+        {
+            SpawnBoss();
+            return;
+        }
 
         if (Time.time >= nextSpawnTime)
         {
             SpawnEnemy();
-            nextSpawnTime = Time.time + (1f / currentSpawnRate);
-        }
-
-        if (Time.time >= nextWaveTime)
-        {
-            IncreaseDifficulty();
-            nextWaveTime = Time.time + timeBetweenWaves;
+            nextSpawnTime = Time.time + 1f;
         }
     }
 
     void SpawnEnemy()
     {
-        Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        Vector2 spawnPosition = (Vector2)player.position + (randomDirection * spawnRadius);
-
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Vector2 randomPos = Random.insideUnitCircle.normalized * spawnRadius;
+        Instantiate(enemyPrefab, (Vector2)player.position + randomPos, Quaternion.identity);
     }
 
-    void IncreaseDifficulty()
+    void SpawnBoss()
     {
-        currentSpawnRate += spawnRateMultiplier;
-        Debug.Log($"Wave Complete! New Spawn Rate: {currentSpawnRate} enemies/sec");
+        bossSpawned = true;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+
+        Instantiate(bossPrefab, Vector3.zero, Quaternion.identity);
+
+        Debug.Log("WARNING: BOSS SPAWNED!");
     }
 }

@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [Header("Stats")]
     public float maxHealth = 3f;
-    public GameObject xpGemPrefab;
     public float contactDamage = 1f;
+
+    [Header("Drops & Type")]
+    public GameObject xpGemPrefab;
+    public bool isBoss = false;
 
     private float currentHealth;
 
@@ -25,6 +29,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
+        if (isBoss)
+        {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.ForceWin();
+            }
+            Destroy(gameObject);
+            return;
+        }
+
         if (xpGemPrefab != null)
         {
             Instantiate(xpGemPrefab, transform.position, Quaternion.identity);

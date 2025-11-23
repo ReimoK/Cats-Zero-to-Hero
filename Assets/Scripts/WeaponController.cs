@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    [Header("Weapon Stats")]
     public GameObject projectilePrefab;
+    public float damage = 1f;
     public float fireRate = 0.5f;
     public float projectileSpeed = 10f;
+    public int projectileCount = 1;
     public float searchRadius = 15f;
 
     private PlayerController playerController;
@@ -13,19 +16,12 @@ public class WeaponController : MonoBehaviour
     void Start()
     {
         playerController = GetComponent<PlayerController>();
-        if (playerController == null)
-        {
-            Debug.LogError("WeaponController requires a PlayerController on the same GameObject.");
-        }
         nextFireTime = Time.time;
     }
 
     void Update()
     {
-        if (playerController.isMoving)
-        {
-            return;
-        }
+        if (playerController.isMoving) return;
 
         if (Time.time >= nextFireTime)
         {
@@ -37,7 +33,6 @@ public class WeaponController : MonoBehaviour
     private void TryToFire()
     {
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, searchRadius, LayerMask.GetMask("Enemy"));
-
         Transform closestEnemy = null;
         float minDistance = Mathf.Infinity;
 
@@ -54,21 +49,41 @@ public class WeaponController : MonoBehaviour
         if (closestEnemy != null)
         {
             Vector2 direction = (closestEnemy.position - transform.position).normalized;
-            FireProjectile(direction);
+
+            if (projectileCount == 1)
+            {
+                FireProjectile(direction, 0);
+            }
+            else
+            {
+                for (int i = 0; i < projectileCount; i++)
+                {
+                    float spread = -15f + (i * (30f / (projectileCount - 1)));
+                    if (projectileCount == 1) spread = 0;
+
+                    FireProjectile(direction, spread);
+                }
+            }
         }
     }
 
-    private void FireProjectile(Vector2 direction)
+    private void FireProjectile(Vector2 direction, float angleOffset)
     {
+        Vector2 finalDir = Quaternion.Euler(0, 0, angleOffset) * direction;
+
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D projRb = projectile.GetComponent<Rigidbody2D>();
 
-        projectile.GetComponent<Projectile>().damage = 1f;
+        Projectile projScript = projectile.GetComponent<Projectile>();
+        if (projScript != null) projScript.damage = damage;
 
         if (projRb != null)
         {
-            projRb.linearVelocity = direction * projectileSpeed;
+            projRb.linearVelocity = finalDir * projectileSpeed;
         }
+
+        float angle = Mathf.Atan2(finalDir.y, finalDir.x) * Mathf.Rad2Deg;
+        projectile.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         Destroy(projectile, 3f);
     }
