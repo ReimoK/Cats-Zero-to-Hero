@@ -38,6 +38,10 @@ public class WeaponController : MonoBehaviour
 
         foreach (Collider2D hit in hitColliders)
         {
+            Renderer r = hit.GetComponentInChildren<Renderer>();
+            if (r == null || !r.isVisible)
+                continue;
+
             float distance = Vector2.Distance(transform.position, hit.transform.position);
             if (distance < minDistance)
             {
@@ -74,8 +78,23 @@ public class WeaponController : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D projRb = projectile.GetComponent<Rigidbody2D>();
 
+        AbilityManager abilities = GetComponent<AbilityManager>();
         Projectile projScript = projectile.GetComponent<Projectile>();
-        if (projScript != null) projScript.damage = damage;
+
+        if (projScript != null)
+        {
+            projScript.damage = damage;
+
+            if (abilities != null)
+            {
+                projScript.applyBind = abilities.hasYarn;
+                projScript.bindDuration = abilities.bindDuration;
+
+                projScript.applySlow = abilities.hasMilk;
+                projScript.slowAmount = abilities.slowAmount;
+                projScript.slowDuration = abilities.slowDuration;
+            }
+        }
 
         if (projRb != null)
         {

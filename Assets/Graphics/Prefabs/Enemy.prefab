@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4060394143342509657, guid: bf8978c4517fc4b429618ed9681140a7, type: 3}
+  m_Sprite: {fileID: 2796004536368664380, guid: cf9b5338b236de3459118d5f9844e657, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,9 +106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ef34f30557e164b91643901c0e3cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 3
-  xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
+  maxHealth: 1
   contactDamage: 1
+  xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
+  isBoss: 0
 --- !u!114 &6933371968269380336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eb95da87409084eb95a190ad2c5caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  moveSpeed: 3
+  baseMoveSpeed: 3
+  currentMoveSpeed: 0
+  rotationOffset: 0
 --- !u!60 &6896403855607735828
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +163,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4, y: 0.14}
+    oldSize: {x: 0.6451613, y: 0.22580644}
     newSize: {x: 0.4, y: 0.14}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

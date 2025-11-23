@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.39305893, y: -1.0582355, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1147197890, guid: 7a4330d5d1243c4428e7f50e545bb60c, type: 3}
+  m_Sprite: {fileID: -2138883635423787576, guid: a35337d36a984bf41ae67518b5fdee83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,7 +159,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,25 +167,40 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.21058616, y: 0.47975868}
-      - {x: 0.07305753, y: 0.53828067}
-      - {x: -0.40674296, y: 0.53650373}
-      - {x: -0.47984168, y: 0.51731104}
-      - {x: -0.6002914, y: 0.49163377}
-      - {x: -0.6325494, y: 0.40189394}
-      - {x: -0.52534866, y: 0.10938594}
-      - {x: -0.43308732, y: -0.11400998}
-      - {x: -0.36115405, y: -0.4068526}
-      - {x: -0.34441218, y: -0.6017482}
-      - {x: -0.2917795, y: -0.665536}
-      - {x: 0.43488047, y: -0.6907596}
-      - {x: 0.6451613, y: -0.516129}
-      - {x: 0.6703849, y: -0.31602457}
-      - {x: 0.5139234, y: -0.18324327}
-      - {x: 0.36189216, y: -0.22294271}
-      - {x: 0.2508743, y: -0.03639376}
-      - {x: 0.39960366, y: 0.1832462}
-      - {x: 0.42493224, y: 0.49866813}
+    - - {x: 0.19707443, y: -0.110704005}
+      - {x: 0.20034058, y: -0.07663478}
+      - {x: 0.16273732, y: -0.040614102}
+      - {x: 0.13668637, y: -0.03767631}
+      - {x: 0.09557354, y: 0.050253727}
+      - {x: 0.051822353, y: 0.09472762}
+      - {x: 0.028323103, y: 0.13606288}
+      - {x: 0.041980628, y: 0.14644042}
+      - {x: 0.03760783, y: 0.18377322}
+      - {x: 0.002971021, y: 0.18506648}
+      - {x: -0.010745518, y: 0.15668704}
+      - {x: -0.039911017, y: 0.16039509}
+      - {x: -0.03922394, y: 0.18925223}
+      - {x: -0.066382706, y: 0.18897599}
+      - {x: -0.08459868, y: 0.1731577}
+      - {x: -0.085538805, y: 0.1484654}
+      - {x: -0.13487965, y: 0.10078281}
+      - {x: -0.13641346, y: 0.06965595}
+      - {x: -0.08179107, y: 0.05954714}
+      - {x: -0.09232775, y: 0.028515667}
+      - {x: -0.091024175, y: -0.0037670927}
+      - {x: -0.08468747, y: -0.049275488}
+      - {x: -0.053384364, y: -0.0833067}
+      - {x: -0.0703854, y: -0.08715966}
+      - {x: -0.06501377, y: -0.10719121}
+      - {x: 0.1003623, y: -0.11979024}
+      - {x: 0.12956801, y: -0.09341285}
+      - {x: 0.14953634, y: -0.10530364}
+      - {x: 0.15129212, y: -0.13996574}
+      - {x: 0.19070637, y: -0.1631056}
+      - {x: 0.251132, y: -0.14776275}
+      - {x: 0.2793759, y: -0.11626932}
+      - {x: 0.26989105, y: -0.09779787}
+      - {x: 0.2073934, y: -0.118817985}
   m_UseDelaunayMesh: 0
 --- !u!114 &416481532960884007
 MonoBehaviour:
@@ -199,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ef34f30557e164b91643901c0e3cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 50
+  maxHealth: 100
   contactDamage: 1
   xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
   isBoss: 1
@@ -215,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ba46fb3cda5c140830e7f719491b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
-  moveSpeed: 0
+  moveSpeed: 0.5
   enemyProjectilePrefab: {fileID: 5463740370273534498, guid: 1bbac613b1f971c4ebf64620063d1b62, type: 3}
   fireRate: 2
   projectilesPerBurst: 12

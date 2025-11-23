@@ -7,6 +7,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject bossPrefab;
     public float spawnRadius = 10f;
 
+    [Header("Difficulty Scaling")]
+    public float healthGainPerMinute = 2f;  // +2 HP every minute
+    public float speedGainPerMinute = 0.1f; // +0.1 Speed every minute
+
     [Header("Timing")]
     public float bossSpawnTime = 60f; 
     private bool bossSpawned = false;
@@ -39,7 +43,26 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Vector2 randomPos = Random.insideUnitCircle.normalized * spawnRadius;
-        Instantiate(enemyPrefab, (Vector2)player.position + randomPos, Quaternion.identity);
+        Vector3 spawnPos = (Vector2)player.position + randomPos;
+
+        GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+
+        float timeInMinutes = Time.timeSinceLevelLoad / 60f;
+
+        float extraHealth = timeInMinutes * healthGainPerMinute;
+        float extraSpeed = timeInMinutes * speedGainPerMinute;
+
+        EnemyHealth healthScript = newEnemy.GetComponent<EnemyHealth>();
+        if (healthScript != null)
+        {
+            healthScript.ApplyDifficultyBuff(extraHealth);
+        }
+
+        EnemyAI movementScript = newEnemy.GetComponent<EnemyAI>();
+        if (movementScript != null)
+        {
+            movementScript.currentMoveSpeed += extraSpeed;
+        }
     }
 
     void SpawnBoss()

@@ -1,11 +1,10 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private float gameTime = 0f;
 
     [Header("UI References")]
     public ExperienceBar xpBar;
@@ -13,11 +12,28 @@ public class GameManager : MonoBehaviour
     public GameObject winPanel;
     public GameObject losePanel;
 
+    [Header("Upgrade Buttons (Text)")]
     public TextMeshProUGUI button1Text;
     public TextMeshProUGUI button2Text;
     public TextMeshProUGUI button3Text;
 
-    [Header("Stats")]
+    [Header("Upgrade Buttons (Icons)")]
+    public Image button1Icon;
+    public Image button2Icon;
+    public Image button3Icon;
+
+    [Header("Stat Sprites")]
+    public Sprite healthIcon;
+    public Sprite damageIcon;
+    public Sprite speedIcon;
+
+    [Header("Ability Sprites")]
+    public Sprite yarnIcon;
+    public Sprite milkIcon;
+    public Sprite trapIcon;
+    public Sprite cheeseIcon;
+
+    [Header("Game Stats")]
     public float currentXP = 0f;
     public int currentLevel = 1;
     public float xpToNextLevel = 10f;
@@ -25,6 +41,7 @@ public class GameManager : MonoBehaviour
     public int enemiesToWin = 50;
 
     private bool isMilestoneLevel = false;
+    private float gameTime = 0f;
 
     void Awake()
     {
@@ -32,6 +49,7 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
 
         Time.timeScale = 1f;
+
         if (levelUpPanel) levelUpPanel.SetActive(false);
         if (winPanel) winPanel.SetActive(false);
         if (losePanel) losePanel.SetActive(false);
@@ -39,14 +57,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (xpBar != null) xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
     }
+
     void Update()
     {
         if (Time.timeScale > 0)
         {
             gameTime += Time.deltaTime;
-
             if (HUDManager.Instance != null)
             {
                 HUDManager.Instance.UpdateTimer(gameTime);
@@ -57,7 +76,9 @@ public class GameManager : MonoBehaviour
     public void AddXP(float amount)
     {
         currentXP += amount;
-        if (xpBar != null) xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
 
         if (currentXP >= xpToNextLevel)
         {
@@ -68,7 +89,6 @@ public class GameManager : MonoBehaviour
     public void EnemyKilled()
     {
         enemiesKilled++;
-        if (enemiesKilled >= enemiesToWin) WinGame();
     }
 
     private void LevelUp()
@@ -77,7 +97,8 @@ public class GameManager : MonoBehaviour
         currentXP -= xpToNextLevel;
         xpToNextLevel *= 1.2f;
 
-        if (xpBar != null) xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
+        if (xpBar != null)
+            xpBar.UpdateBar(currentXP, xpToNextLevel, currentLevel);
 
         if (currentLevel % 5 == 0)
         {
@@ -94,60 +115,97 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+
     private void GenerateStatOptions()
     {
-        if (button1Text) button1Text.text = "Max Health +1\n(Full Heal)";
-        if (button2Text) button2Text.text = "Damage +10%";
-        if (button3Text) button3Text.text = "Attack Speed +10%";
+        if (button1Text) button1Text.text = "(+1 Max HP & Full Heal)";
+        if (button2Text) button2Text.text = "Damage +1)";
+        if (button3Text) button3Text.text = "+10% Fire Rate";
+
+        if (button1Icon) button1Icon.sprite = healthIcon;
+        if (button2Icon) button2Icon.sprite = damageIcon;
+        if (button3Icon) button3Icon.sprite = speedIcon;
     }
 
     private void GenerateAbilityOptions()
     {
-        if (button1Text) button1Text.text = "Empty";
-        if (button2Text) button2Text.text = "Empty";
-        if (button3Text) button3Text.text = "Empty";
+        AbilityManager abilities = GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>();
+
+        if (button1Text) button1Text.text = "Yarn Ball";
+        if (button1Icon) button1Icon.sprite = yarnIcon;
+
+        if (button2Text) button2Text.text = "Spilled Milk";
+        if (button2Icon) button2Icon.sprite = milkIcon;
+
+        if (abilities != null && abilities.hasTraps)
+        {
+            if (button3Text) button3Text.text = "Stinky Cheese";
+            if (button3Icon) button3Icon.sprite = cheeseIcon;
+        }
+        else
+        {
+            if (button3Text) button3Text.text = "Mouse Trap";
+            if (button3Icon) button3Icon.sprite = trapIcon;
+        }
     }
+
 
     public void ChooseUpgrade(int buttonIndex)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         WeaponController weapon = player.GetComponent<WeaponController>();
         PlayerHealth health = player.GetComponent<PlayerHealth>();
+        AbilityManager abilities = player.GetComponent<AbilityManager>();
 
         if (isMilestoneLevel)
         {
-            // ABILITIES
             switch (buttonIndex)
             {
-                case 0: 
+                case 0: // Yarn
+                    if (abilities) abilities.hasYarn = true;
+                    Debug.Log("Selected: Yarn Ball");
                     break;
-                case 1:
+
+                case 1: // Milk
+                    if (abilities) abilities.hasMilk = true;
+                    Debug.Log("Selected: Spilled Milk");
                     break;
-                case 2:
+
+                case 2: // Traps / Cheese
+                    if (abilities)
+                    {
+                        if (!abilities.hasTraps)
+                        {
+                            abilities.hasTraps = true;
+                            Debug.Log("Selected: Mouse Traps");
+                        }
+                        else
+                        {
+                            abilities.hasCheeseUpgrade = true;
+                            Debug.Log("Selected: Cheese Upgrade");
+                        }
+                    }
                     break;
             }
         }
         else
         {
-            // APPLY STATS
             switch (buttonIndex)
             {
-                case 0: // Health Upgrade
+                case 0: // Health
                     health.maxHealth += 1;
-                    health.currentHealth = health.maxHealth;
+                    health.Heal(health.maxHealth);
+                    Debug.Log("Selected: Health Up");
+                    break;
 
-                    if (HUDManager.Instance != null)
-                    {
-                        HUDManager.Instance.UpdateHealth(health.currentHealth, health.maxHealth);
-                    }
-                    break;
                 case 1: // Damage
-                    weapon.damage += 0.5f;
-                    Debug.Log("Stat: Damage Up");
+                    weapon.damage += 1f;
+                    Debug.Log("Selected: Damage Up");
                     break;
-                case 2: // Attack Speed 
+
+                case 2: // Attack Speed
                     weapon.fireRate *= 0.9f;
-                    Debug.Log("Stat: Speed Up");
+                    Debug.Log("Selected: Speed Up");
                     break;
             }
         }
@@ -166,31 +224,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoseGame()
+    public void ForceWin()
     {
-        if (winPanel.activeSelf || losePanel.activeSelf) return;
-
-        Debug.Log("GAME OVER! You lost.");
-        Time.timeScale = 0f;
-        if (losePanel != null)
-        {
-            losePanel.SetActive(true);
-        }
+        WinGame();
     }
 
     private void WinGame()
     {
         if (winPanel.activeSelf || losePanel.activeSelf) return;
 
-        Debug.Log("YOU WIN! Goal Achieved.");
+        Debug.Log("YOU WIN!");
         Time.timeScale = 0f;
-        if (winPanel != null)
-        {
-            winPanel.SetActive(true);
-        }
+        if (winPanel != null) winPanel.SetActive(true);
     }
-    public void ForceWin()
+
+    public void LoseGame()
     {
-        WinGame();
+        if (winPanel.activeSelf || losePanel.activeSelf) return;
+
+        Debug.Log("GAME OVER!");
+        Time.timeScale = 0f;
+        if (losePanel != null) losePanel.SetActive(true);
     }
 }

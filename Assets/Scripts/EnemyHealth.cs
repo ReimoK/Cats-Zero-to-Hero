@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("Stats")]
-    public float maxHealth = 3f;
+    public float maxHealth = 1f;
     public float contactDamage = 1f;
 
     [Header("Drops & Type")]
@@ -14,6 +14,12 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        currentHealth = maxHealth;
+    }
+    public void ApplyDifficultyBuff(float healthIncrease)
+    {
+        maxHealth += healthIncrease;
+
         currentHealth = maxHealth;
     }
 
