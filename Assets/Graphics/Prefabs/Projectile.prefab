@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1780816369609894566}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,3 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   damage: 1
   hitEffectPrefab: {fileID: 0}
+  applyBind: 0
+  bindDuration: 0
+  applySlow: 0
+  slowAmount: 0
+  slowDuration: 0
