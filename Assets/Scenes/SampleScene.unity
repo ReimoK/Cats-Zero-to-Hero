@@ -3843,8 +3843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53375316, y: 0.5}
-  m_AnchoredPosition: {x: -2.4991, y: 109.09761}
-  m_SizeDelta: {x: 113.6255, y: 123.0956}
+  m_AnchoredPosition: {x: 0.000018119812, y: 106.15}
+  m_SizeDelta: {x: 150.7759, y: 161.9896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721016679
 MonoBehaviour:
@@ -3866,7 +3866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 4773031513114947462, guid: 2348247b8ee94c146a9400db9609c9d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4474,8 +4474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53375316, y: 0.5}
-  m_AnchoredPosition: {x: -2.4991, y: 109.09761}
-  m_SizeDelta: {x: 113.6255, y: 123.0956}
+  m_AnchoredPosition: {x: 11.7, y: 87.2}
+  m_SizeDelta: {x: 223.6674, y: 212.2675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026775033
 MonoBehaviour:
@@ -4497,7 +4497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1184081909042567840, guid: 2348247b8ee94c146a9400db9609c9d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4972,8 +4972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53375316, y: 0.5}
-  m_AnchoredPosition: {x: -2.4991, y: 109.09761}
-  m_SizeDelta: {x: 113.6255, y: 123.0956}
+  m_AnchoredPosition: {x: 6.5349, y: 94.552}
+  m_SizeDelta: {x: 125.0136, y: 138.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350585973
 MonoBehaviour:
@@ -4995,7 +4995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -3594672465257244376, guid: 2348247b8ee94c146a9400db9609c9d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
