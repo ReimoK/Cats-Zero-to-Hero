@@ -5547,6 +5547,7 @@ GameObject:
   - component: {fileID: 1406167765}
   - component: {fileID: 1406167764}
   - component: {fileID: 1406167763}
+  - component: {fileID: 1406167766}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -5618,9 +5619,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 555343877}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 1406167766}
+        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5668,6 +5669,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406167761}
   m_CullTransparentMesh: 1
+--- !u!114 &1406167766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406167761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29231d7edf8cb9548803c7d2f80fd709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
+  sceneName: main_title
 --- !u!1 &1478811146
 GameObject:
   m_ObjectHideFlags: 0
