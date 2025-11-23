@@ -1,40 +1,19 @@
 fileFormatVersion: 2
-guid: 0df054184e1805e4caa941dcbe872839
+guid: 53dc81f5cd46bd94dabf293eab972b82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8475454823344919268
-    second: CZtH_ver1 (1)_0
+      213: -6743349854559868409
+    second: level_home_0
   - first:
-      213: -6931420143905933803
-    second: CZtH_ver1 (1)_1
+      213: 1196293913896638601
+    second: level_home_1
   - first:
-      213: 2106991302444785994
-    second: CZtH_ver1 (1)_2
+      213: 3858359690930545433
+    second: level_home_2
   - first:
-      213: -7596730531976363996
-    second: CZtH_ver1 (1)_3
-  - first:
-      213: 1752558412021056871
-    second: CZtH_ver1 (1)_4
-  - first:
-      213: -8094845334361762173
-    second: CZtH_ver1 (1)_5
-  - first:
-      213: 1606550276491330607
-    second: CZtH_ver1 (1)_6
-  - first:
-      213: 8058861549057670248
-    second: CZtH_ver1 (1)_7
-  - first:
-      213: 8330397202125814883
-    second: CZtH_ver1 (1)_8
-  - first:
-      213: -8164549061180758730
-    second: CZtH_ver1 (1)_9
-  - first:
-      213: 1165519567563804941
-    second: CZtH_ver1 (1)_10
+      213: 3475058541866809281
+    second: level_home_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -126,24 +105,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_0
+      name: level_home_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e25857c14dde9570800000000000000
-      internalID: 8475454823344919268
+      spriteID: 70ae6caf80fca62a0800000000000000
+      internalID: -6743349854559868409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_1
+      name: level_home_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 280
-        width: 11
-        height: 16
+        x: 64
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 516ff757a16aecf90800000000000000
-      internalID: -6931420143905933803
+      spriteID: 98855c8f9f61a9010800000000000000
+      internalID: 1196293913896638601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_2
+      name: level_home_2
       rect:
         serializedVersion: 2
         x: 128
@@ -202,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a412f0f1d698d3d10800000000000000
-      internalID: 2106991302444785994
+      spriteID: 913e99942b5ab8530800000000000000
+      internalID: 3858359690930545433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_3
+      name: level_home_3
       rect:
         serializedVersion: 2
         x: 192
@@ -224,36 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4204f2394ddf29690800000000000000
-      internalID: -7596730531976363996
+      spriteID: 1c778a90553e93030800000000000000
+      internalID: 3475058541866809281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76543ac1796525810800000000000000
-      internalID: 1752558412021056871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CZtH_ver1 (1)_5
+      name: level_home_4
       rect:
         serializedVersion: 2
         x: 0
@@ -266,16 +210,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38693a58e0559af80800000000000000
-      internalID: -8094845334361762173
+      spriteID: 803ec2374bf49564f835923402958d10
+      internalID: 864059367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_6
+      name: level_home_5
       rect:
         serializedVersion: 2
         x: 64
@@ -288,16 +232,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f244210f6fc9b4610800000000000000
-      internalID: 1606550276491330607
+      spriteID: 255dc14fe27202e43ae1e0cecdbf884e
+      internalID: -1391995145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_7
+      name: level_home_6
       rect:
         serializedVersion: 2
         x: 128
@@ -310,16 +254,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 86cf2a591e3d6df60800000000000000
-      internalID: 8058861549057670248
+      spriteID: 2f0ff792b5904a847bb3210779effb19
+      internalID: 574932853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_8
+      name: level_home_7
       rect:
         serializedVersion: 2
         x: 192
@@ -332,38 +276,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 36cfd967e148b9370800000000000000
-      internalID: 8330397202125814883
+      spriteID: b3c896e0c68cc3f4aa0ee77286d050a4
+      internalID: 386616273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_9
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6356211f2e1b1be80800000000000000
-      internalID: -8164549061180758730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CZtH_ver1 (1)_10
+      name: level_home_8
       rect:
         serializedVersion: 2
         x: 0
@@ -376,16 +298,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d01586b1fd1cc2010800000000000000
-      internalID: 1165519567563804941
+      spriteID: 515e57670f2458a44ad9d0ea5e4f9738
+      internalID: 2049286992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_11
+      name: level_home_9
       rect:
         serializedVersion: 2
         x: 64
@@ -400,14 +322,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4033d97e3df1de84685aeabf4096ff2e
-      internalID: -973672675
+      spriteID: 6ab3406ef1b4fac449d64f9dc938b8a6
+      internalID: 100400777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_12
+      name: level_home_10
       rect:
         serializedVersion: 2
         x: 128
@@ -422,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92c6c6ac1ff3b804580eb5e4e5dc31ca
-      internalID: -942305661
+      spriteID: e5e9d22876924654c884e41133a4b0c7
+      internalID: 1725158430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_13
+      name: level_home_11
       rect:
         serializedVersion: 2
         x: 192
@@ -444,36 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d5f9bbaceace6643b61fd7467cfd936
-      internalID: 1096457733
+      spriteID: 8a091f8ea00cb744986eafac0ab3b5bb
+      internalID: 1606711255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_14
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7adac188aa2006458d9556c426875cb
-      internalID: 1789687503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CZtH_ver1 (1)_15
+      name: level_home_12
       rect:
         serializedVersion: 2
         x: 0
@@ -488,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f0f4bfedb2c54439a3135dac6f1883
-      internalID: -1647741907
+      spriteID: 1ac676a627e6904498b767e8807b1a52
+      internalID: 872859034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_16
+      name: level_home_13
       rect:
         serializedVersion: 2
         x: 64
@@ -510,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95c451a40696a47439736fcb9e00c959
-      internalID: -688253597
+      spriteID: 6d3c5e4a460eade409afd171f5267415
+      internalID: -1881002971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_17
+      name: level_home_14
       rect:
         serializedVersion: 2
         x: 128
@@ -532,14 +432,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76890c15984cec04f815a7cd4c9ac9c1
-      internalID: -35114747
+      spriteID: f351b65fde431694c99d338d5cab97be
+      internalID: -228154537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_18
+      name: level_home_15
       rect:
         serializedVersion: 2
         x: 192
@@ -554,36 +454,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0b0948e01093243bd58bcad2553134
-      internalID: 1482699523
+      spriteID: d88c7205a7b429947b2e375f99e86787
+      internalID: -166444519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_19
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfbfc7e1189212242bdcadce70d801e6
-      internalID: 212497560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CZtH_ver1 (1)_20
+      name: level_home_16
       rect:
         serializedVersion: 2
         x: 0
@@ -598,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 589f5e2822353ca4ba2ec8b83ba1a697
-      internalID: 1975220623
+      spriteID: 2d80139add0e32145be3063e27da9dd8
+      internalID: -572465580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_21
+      name: level_home_17
       rect:
         serializedVersion: 2
         x: 64
@@ -620,14 +498,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4bb789e5bc46034380f950c43aea8cf
-      internalID: 595809056
+      spriteID: 18b0eb081129fa14b8c7f1e28534dc2f
+      internalID: -389794461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_22
+      name: level_home_18
       rect:
         serializedVersion: 2
         x: 128
@@ -642,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b21ce3e26069ecf41894b6fb8a57cbca
-      internalID: -312800724
+      spriteID: 7b7b9f29927416a4994228feb6ed4809
+      internalID: -1853121172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CZtH_ver1 (1)_23
+      name: level_home_19
       rect:
         serializedVersion: 2
         x: 192
@@ -664,30 +542,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29277833d1ef1dc419f5f3282ce9162f
-      internalID: -1939742832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CZtH_ver1 (1)_24
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9055809884620f441b094e820517f848
-      internalID: 74824920
+      spriteID: e4fb1e9f1a92e70438ba1e5881704643
+      internalID: 1161049936
       vertices: []
       indices: 
       edges: []
@@ -696,7 +552,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: debd3af5eebc290409e978856753d111
+    spriteID: 7a97c06ae2a323a41bef341830438be0
     internalID: 0
     vertices: []
     indices: 
@@ -708,31 +564,26 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CZtH_ver1 (1)_0: 8475454823344919268
-      CZtH_ver1 (1)_1: -6931420143905933803
-      CZtH_ver1 (1)_10: 1165519567563804941
-      CZtH_ver1 (1)_11: -973672675
-      CZtH_ver1 (1)_12: -942305661
-      CZtH_ver1 (1)_13: 1096457733
-      CZtH_ver1 (1)_14: 1789687503
-      CZtH_ver1 (1)_15: -1647741907
-      CZtH_ver1 (1)_16: -688253597
-      CZtH_ver1 (1)_17: -35114747
-      CZtH_ver1 (1)_18: 1482699523
-      CZtH_ver1 (1)_19: 212497560
-      CZtH_ver1 (1)_2: 2106991302444785994
-      CZtH_ver1 (1)_20: 1975220623
-      CZtH_ver1 (1)_21: 595809056
-      CZtH_ver1 (1)_22: -312800724
-      CZtH_ver1 (1)_23: -1939742832
-      CZtH_ver1 (1)_24: 74824920
-      CZtH_ver1 (1)_3: -7596730531976363996
-      CZtH_ver1 (1)_4: 1752558412021056871
-      CZtH_ver1 (1)_5: -8094845334361762173
-      CZtH_ver1 (1)_6: 1606550276491330607
-      CZtH_ver1 (1)_7: 8058861549057670248
-      CZtH_ver1 (1)_8: 8330397202125814883
-      CZtH_ver1 (1)_9: -8164549061180758730
+      level_home_0: -6743349854559868409
+      level_home_1: 1196293913896638601
+      level_home_10: 1725158430
+      level_home_11: 1606711255
+      level_home_12: 872859034
+      level_home_13: -1881002971
+      level_home_14: -228154537
+      level_home_15: -166444519
+      level_home_16: -572465580
+      level_home_17: -389794461
+      level_home_18: -1853121172
+      level_home_19: 1161049936
+      level_home_2: 3858359690930545433
+      level_home_3: 3475058541866809281
+      level_home_4: 864059367
+      level_home_5: -1391995145
+      level_home_6: 574932853
+      level_home_7: 386616273
+      level_home_8: 2049286992
+      level_home_9: 100400777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
