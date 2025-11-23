@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     private void LevelUp()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Powerup);
         currentLevel++;
         currentXP -= xpToNextLevel;
         xpToNextLevel *= 1.2f;

@@ -78,23 +78,8 @@ public class WeaponController : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D projRb = projectile.GetComponent<Rigidbody2D>();
 
-        AbilityManager abilities = GetComponent<AbilityManager>();
         Projectile projScript = projectile.GetComponent<Projectile>();
-
-        if (projScript != null)
-        {
-            projScript.damage = damage;
-
-            if (abilities != null)
-            {
-                projScript.applyBind = abilities.hasYarn;
-                projScript.bindDuration = abilities.bindDuration;
-
-                projScript.applySlow = abilities.hasMilk;
-                projScript.slowAmount = abilities.slowAmount;
-                projScript.slowDuration = abilities.slowDuration;
-            }
-        }
+        if (projScript != null) projScript.damage = damage;
 
         if (projRb != null)
         {

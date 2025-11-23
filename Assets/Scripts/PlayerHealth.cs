@@ -26,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Time.time < nextDamageTime) return;
 
+        AudioManager.Instance.Play(AudioManager.SoundType.Take_Damage);
+
         currentHealth -= amount;
         nextDamageTime = Time.time + damageCooldown;
 

@@ -32,6 +32,7 @@ public class BossAI : MonoBehaviour
         if (Time.time >= nextFireTime)
         {
             FireRadialBurst();
+            AudioManager.Instance.Play(AudioManager.SoundType.Enemy_Shoot);
             nextFireTime = Time.time + fireRate;
         }
     }

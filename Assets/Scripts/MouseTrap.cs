@@ -15,6 +15,7 @@ public class MouseTrap : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Mousetrap);
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
