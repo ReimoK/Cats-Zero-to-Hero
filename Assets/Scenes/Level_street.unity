@@ -1771,7 +1771,7 @@ MonoBehaviour:
   spawnRadius: 10
   healthGainPerMinute: 2
   speedGainPerMinute: 0.1
-  bossSpawnTime: 60
+  bossSpawnTime: 90
 --- !u!4 &812632950
 Transform:
   m_ObjectHideFlags: 0
