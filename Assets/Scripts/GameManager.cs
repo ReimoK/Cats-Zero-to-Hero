@@ -119,8 +119,8 @@ public class GameManager : MonoBehaviour
 
     private void GenerateStatOptions()
     {
-        if (button1Text) button1Text.text = "(+1 Max HP & Full Heal)";
-        if (button2Text) button2Text.text = "Damage +1)";
+        if (button1Text) button1Text.text = "+1 Max HP & Full Heal";
+        if (button2Text) button2Text.text = "Damage +1";
         if (button3Text) button3Text.text = "+10% Fire Rate";
 
         if (button1Icon) button1Icon.sprite = healthIcon;
