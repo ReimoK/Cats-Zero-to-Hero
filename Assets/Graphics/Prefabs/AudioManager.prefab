@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5490356284149515173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3516271673676637683}
+  - component: {fileID: 5367423624669037656}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3516271673676637683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490356284149515173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 354.316, y: 226.2827, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5367423624669037656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490356284149515173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c51998efb5759438f5d89d1cde1a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  AllSounds:
+  - Type: 1
+    Clip: {fileID: 8300000, guid: 0b6af1d127d262046867bb5bab093056, type: 3}
+    Volume: 1
+  - Type: 0
+    Clip: {fileID: 8300000, guid: cf58baefd9c79b140ab03ba8f5a7f4d9, type: 3}
+    Volume: 1
+  - Type: 3
+    Clip: {fileID: 8300000, guid: 0a9a46427199b9e448380342cac174d9, type: 3}
+    Volume: 1
+  - Type: 4
+    Clip: {fileID: 8300000, guid: 86d602d4e51254e42957c200192a2fec, type: 3}
+    Volume: 1
+  - Type: 6
+    Clip: {fileID: 8300000, guid: 6da52092053daec41b421ea0aed155a3, type: 3}
+    Volume: 1
+  - Type: 7
+    Clip: {fileID: 8300000, guid: dbb545046870bc543a9eb6f7aa0e83b6, type: 3}
+    Volume: 1
+  masterSfx: 1
+  masterMusic: 1

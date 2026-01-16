@@ -13,8 +13,6 @@ public class AudioManager : MonoBehaviour
         Button_Click,
         Music_Menu,
         Music_Battle
-
-        // Add more sound types as needed
     }
 
     [System.Serializable]
@@ -25,61 +23,85 @@ public class AudioManager : MonoBehaviour
 
         [Range(0f, 1f)]
         public float Volume = 1f;
-
-        [HideInInspector]
-        public AudioSource Source;
     }
 
-    //Singleton
     public static AudioManager Instance;
 
-    //All sounds and their associated type - Set these in the inspector
     public Sound[] AllSounds;
 
-    //Runtime collections
     private Dictionary<SoundType, Sound> _soundDictionary = new Dictionary<SoundType, Sound>();
+
     private AudioSource _musicSource;
+
+    // Master volume controls (0..1)
+    [Range(0f, 1f)] public float masterSfx = 1f;
+    [Range(0f, 1f)] public float masterMusic = 1f;
+
+    const string SfxKey = "Vol_SFX";
+    const string MusicKey = "Vol_Music";
 
     private void Awake()
     {
-        //Assign singleton
+        // Singleton (prevents duplicates across scenes)
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
 
-        //Set up sounds
+        // Set up dictionary
         foreach (var s in AllSounds)
         {
             _soundDictionary[s.Type] = s;
         }
+
+        // Create music source once
+        if (_musicSource == null)
+        {
+            _musicSource = gameObject.AddComponent<AudioSource>();
+            _musicSource.loop = true;
+        }
+
+        // Load saved volumes
+        masterSfx = PlayerPrefs.GetFloat(SfxKey, 1f);
+        masterMusic = PlayerPrefs.GetFloat(MusicKey, 1f);
+        ApplyMusicVolume();
     }
 
+    bool IsMusic(SoundType type)
+    {
+        return type == SoundType.Music_Menu || type == SoundType.Music_Battle;
+    }
 
-
-    //Call this method to play a sound
+    // Play one-shot SFX
     public void Play(SoundType type)
     {
-        //Make sure there's a sound assigned to your specified type
         if (!_soundDictionary.TryGetValue(type, out Sound s))
         {
             Debug.LogWarning($"Sound type {type} not found!");
             return;
         }
 
-        //Creates a new sound object
-        var soundObj = new GameObject($"Sound_{type}");
+        // Don’t let music types be played as one-shots
+        if (IsMusic(type))
+        {
+            Debug.LogWarning($"{type} is music. Use ChangeMusic() instead.");
+            return;
+        }
+
+        var soundObj = new GameObject($"SFX_{type}");
         var audioSrc = soundObj.AddComponent<AudioSource>();
 
-        //Assigns your sound properties
         audioSrc.clip = s.Clip;
-        audioSrc.volume = s.Volume;
-
-        //Play the sound
+        audioSrc.volume = s.Volume * masterSfx;
         audioSrc.Play();
 
-        //Destroy the object
         Destroy(soundObj, s.Clip.length);
     }
 
-    //Call this method to change music tracks
+    // Swap looping music track
     public void ChangeMusic(SoundType type)
     {
         if (!_soundDictionary.TryGetValue(type, out Sound track))
@@ -90,12 +112,49 @@ public class AudioManager : MonoBehaviour
 
         if (_musicSource == null)
         {
-            var container = new GameObject("SoundTrackObj");
-            _musicSource = container.AddComponent<AudioSource>();
+            _musicSource = gameObject.AddComponent<AudioSource>();
             _musicSource.loop = true;
         }
 
+        if (_musicSource.isPlaying && _musicSource.clip == track.Clip)
+            return;
+
         _musicSource.clip = track.Clip;
+        _musicSource.volume = track.Volume * masterMusic;
         _musicSource.Play();
     }
+
+    void ApplyMusicVolume()
+    {
+        if (_musicSource != null && _musicSource.clip != null)
+        {
+            // Find the track volume from dictionary (optional but nice)
+            // If you want simplest, just set _musicSource.volume = masterMusic;
+            _musicSource.volume = masterMusic;
+        }
+    }
+
+    // Called by sliders
+    public void SetSfxVolume(float value01)
+    {
+        masterSfx = value01;
+        PlayerPrefs.SetFloat(SfxKey, masterSfx);
+        PlayerPrefs.Save();
+    }
+
+    public void SetMusicVolume(float value01)
+    {
+        masterMusic = value01;
+
+        // Update currently playing music immediately
+        // If you want per-track base volume, keep track of it; simplest is:
+        if (_musicSource != null)
+            _musicSource.volume = masterMusic;
+
+        PlayerPrefs.SetFloat(MusicKey, masterMusic);
+        PlayerPrefs.Save();
+    }
+
+    public float GetSfxVolume() => masterSfx;
+    public float GetMusicVolume() => masterMusic;
 }
