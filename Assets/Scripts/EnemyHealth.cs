@@ -6,8 +6,10 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth = 1f;
     public float contactDamage = 1f;
 
-    [Header("Drops & Type")]
+    [Header("Drops")]
     public GameObject xpGemPrefab;
+    public GameObject moneyPrefab;
+    public bool dropsMoneyInsteadOfXP = false;
     public bool isBoss = false;
 
     private float currentHealth;
@@ -37,23 +39,19 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isBoss)
         {
-            if (GameManager.Instance != null)
-            {
-                GameManager.Instance.ForceWin();
-            }
+            if (GameManager.Instance != null) GameManager.Instance.ForceWin();
             Destroy(gameObject);
             return;
         }
 
-        if (xpGemPrefab != null)
+        GameObject toDrop = dropsMoneyInsteadOfXP ? moneyPrefab : xpGemPrefab;
+
+        if (toDrop != null)
         {
-            Instantiate(xpGemPrefab, transform.position, Quaternion.identity);
+            Instantiate(toDrop, transform.position, Quaternion.identity);
         }
 
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.EnemyKilled();
-        }
+        if (GameManager.Instance != null) GameManager.Instance.EnemyKilled();
 
         Destroy(gameObject);
     }

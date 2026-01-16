@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 416481532960884007}
   - component: {fileID: 5718896992653671285}
   m_Layer: 6
-  m_Name: Boss
+  m_Name: Mini Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,12 +214,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ef34f30557e164b91643901c0e3cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 100
+  maxHealth: 50
   contactDamage: 1
   xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
   moneyPrefab: {fileID: 775688075203785203, guid: 4f2b0e192b34fea4591adf901875d8b2, type: 3}
   dropsMoneyInsteadOfXP: 0
-  isBoss: 1
+  isBoss: 0
 --- !u!114 &5718896992653671285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ba46fb3cda5c140830e7f719491b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
-  moveSpeed: 1
+  moveSpeed: 1.25
   enemyProjectilePrefab: {fileID: 5463740370273534498, guid: 1bbac613b1f971c4ebf64620063d1b62, type: 3}
   fireRate: 2
   projectilesPerBurst: 12
-  projectileSpeed: 4
+  projectileSpeed: 3

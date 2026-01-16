@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("Economy")]
+    public int totalGold = 0;
+
     [Header("UI References")]
     public ExperienceBar xpBar;
     public GameObject levelUpPanel;
@@ -71,6 +74,11 @@ public class GameManager : MonoBehaviour
                 HUDManager.Instance.UpdateTimer(gameTime);
             }
         }
+    }
+    public void AddGold(int amount)
+    {
+        totalGold += amount;
+        HUDManager.Instance.UpdateGold(totalGold);
     }
 
     public void AddXP(float amount)
@@ -230,7 +238,7 @@ public class GameManager : MonoBehaviour
         WinGame();
     }
 
-    private void WinGame()
+    public void WinGame()
     {
         if (winPanel.activeSelf || losePanel.activeSelf) return;
 

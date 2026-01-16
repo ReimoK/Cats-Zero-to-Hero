@@ -8,6 +8,7 @@ public class HUDManager : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI healthText;
+    public TextMeshProUGUI goldText;
 
     void Awake()
     {
@@ -30,5 +31,9 @@ public class HUDManager : MonoBehaviour
         if (healthText == null) return;
 
         healthText.text = $"HP: {currentHealth} / {maxHealth}";
+    }
+    public void UpdateGold(int currentGold)
+    {
+        if (goldText != null) goldText.text = "Gold: " + currentGold;
     }
 }

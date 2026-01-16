@@ -109,6 +109,8 @@ MonoBehaviour:
   maxHealth: 1
   contactDamage: 0.5
   xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
+  moneyPrefab: {fileID: 775688075203785203, guid: 4f2b0e192b34fea4591adf901875d8b2, type: 3}
+  dropsMoneyInsteadOfXP: 0
   isBoss: 0
 --- !u!114 &6933371968269380336
 MonoBehaviour:
