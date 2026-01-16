@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6896403855607735828}
   - component: {fileID: -80056470890836069}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Enemy 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1338537639163147314, guid: 6fbc1b37857c5534e8b9e2a4411f77e4, type: 3}
+  m_Sprite: {fileID: 8704379709853249035, guid: 6fbc1b37857c5534e8b9e2a4411f77e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ef34f30557e164b91643901c0e3cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 1
-  contactDamage: 1
+  maxHealth: 2
+  contactDamage: 0.5
   xpGemPrefab: {fileID: 775688075203785203, guid: 792a0662bbf09af4fa96d64d025ca0a0, type: 3}
   isBoss: 0
 --- !u!114 &6933371968269380336
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eb95da87409084eb95a190ad2c5caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  baseMoveSpeed: 3
+  baseMoveSpeed: 1.5
   currentMoveSpeed: 0
   rotationOffset: 0
 --- !u!60 &6896403855607735828

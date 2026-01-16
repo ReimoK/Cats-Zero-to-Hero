@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6896403855607735828}
   - component: {fileID: -80056470890836069}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Enemy 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1338537639163147314, guid: 6fbc1b37857c5534e8b9e2a4411f77e4, type: 3}
+  m_Sprite: {fileID: -4382921947816576530, guid: 6fbc1b37857c5534e8b9e2a4411f77e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eb95da87409084eb95a190ad2c5caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  baseMoveSpeed: 3
+  baseMoveSpeed: 2
   currentMoveSpeed: 0
   rotationOffset: 0
 --- !u!60 &6896403855607735828
