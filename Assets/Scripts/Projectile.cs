@@ -11,6 +11,19 @@ public class Projectile : MonoBehaviour
     [HideInInspector] public float slowAmount = 0f;
     [HideInInspector] public float slowDuration = 0f;
 
+    private SpriteRenderer sr;
+
+    void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
+    public void SetBulletSprite(Sprite newSprite)
+    {
+        if (sr == null) sr = GetComponent<SpriteRenderer>();
+        sr.sprite = newSprite;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Projectile") || other.CompareTag("Trap")) return;

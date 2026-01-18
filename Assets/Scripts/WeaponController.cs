@@ -10,6 +10,9 @@ public class WeaponController : MonoBehaviour
     public int projectileCount = 1;
     public float searchRadius = 15f;
 
+    [Header("Skins System")]
+    public Sprite[] bulletSkins;
+
     private PlayerController playerController;
     private float nextFireTime;
 
@@ -54,32 +57,33 @@ public class WeaponController : MonoBehaviour
         {
             Vector2 direction = (closestEnemy.position - transform.position).normalized;
 
-            if (projectileCount == 1)
-            {
-                FireProjectile(direction, 0);
-            }
-            else
-            {
-                for (int i = 0; i < projectileCount; i++)
-                {
-                    float spread = -15f + (i * (30f / (projectileCount - 1)));
-                    if (projectileCount == 1) spread = 0;
+            int skinID = PlayerPrefs.GetInt("EquippedSkin", 0);
 
-                    FireProjectile(direction, spread);
-                }
+            for (int i = 0; i < projectileCount; i++)
+            {
+                float spread = (projectileCount == 1) ? 0 : -15f + (i * (30f / (projectileCount - 1)));
+                FireProjectile(direction, spread, skinID);
             }
         }
     }
 
-    private void FireProjectile(Vector2 direction, float angleOffset)
+    private void FireProjectile(Vector2 direction, float angleOffset, int skinID)
     {
         Vector2 finalDir = Quaternion.Euler(0, 0, angleOffset) * direction;
 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D projRb = projectile.GetComponent<Rigidbody2D>();
-
         Projectile projScript = projectile.GetComponent<Projectile>();
-        if (projScript != null) projScript.damage = damage;
+
+        if (projScript != null)
+        {
+            projScript.damage = damage;
+
+            if (skinID < bulletSkins.Length && bulletSkins[skinID] != null)
+            {
+                projScript.SetBulletSprite(bulletSkins[skinID]);
+            }
+        }
 
         if (projRb != null)
         {
@@ -87,8 +91,6 @@ public class WeaponController : MonoBehaviour
         }
 
         float angle = Mathf.Atan2(finalDir.y, finalDir.x) * Mathf.Rad2Deg;
-        projectile.transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        Destroy(projectile, 3f);
+        projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }

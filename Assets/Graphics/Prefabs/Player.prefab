@@ -134,6 +134,10 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileCount: 1
   searchRadius: 15
+  bulletSkins:
+  - {fileID: -8731579659179131352, guid: b77ca3477afb82f438ae9c458f0d2a88, type: 3}
+  - {fileID: 9082711985608580245, guid: b77ca3477afb82f438ae9c458f0d2a88, type: 3}
+  - {fileID: 7237890493632380373, guid: b77ca3477afb82f438ae9c458f0d2a88, type: 3}
 --- !u!50 &7558890176879967521
 Rigidbody2D:
   serializedVersion: 5
