@@ -7885,6 +7885,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7350518203966618415, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
+      propertyPath: 'catAnimators.Array.data[1]'
+      value: 
+      objectReference: {fileID: 22100000, guid: d5ea37e42aeb43642a94e60ce53adc9f, type: 2}
+    - target: {fileID: 7350518203966618415, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
+      propertyPath: 'catAnimators.Array.data[2]'
+      value: 
+      objectReference: {fileID: 22100000, guid: c15a1c1aed251ee4bb1213fcdab40291, type: 2}
+    - target: {fileID: 7350518203966618415, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
+      propertyPath: catStaticSprites.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381561684541675533, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
       propertyPath: m_Name
       value: Player
