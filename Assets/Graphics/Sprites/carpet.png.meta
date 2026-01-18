@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 53dc81f5cd46bd94dabf293eab972b82
+guid: d979fb7efac7e7644984baf61569cdf7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6743349854559868409
-    second: level_home_0
+      213: 1935985929446074354
+    second: carpet_0
   - first:
-      213: 1196293913896638601
-    second: level_home_1
+      213: 7239594881743800423
+    second: carpet_1
   - first:
-      213: 3858359690930545433
-    second: level_home_2
-  - first:
-      213: 3475058541866809281
-    second: level_home_3
+      213: 2837664395205786627
+    second: carpet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 31
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,95 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level_home_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 258
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70ae6caf80fca62a0800000000000000
-      internalID: -6743349854559868409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 258
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98855c8f9f61a9010800000000000000
-      internalID: 1196293913896638601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 258
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 913e99942b5ab8530800000000000000
-      internalID: 3858359690930545433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 258
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1c778a90553e93030800000000000000
-      internalID: 3475058541866809281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_4
+      name: carpet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -210,16 +119,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 803ec2374bf49564f835923402958d10
-      internalID: 864059367
+      spriteID: 2f7a9ce02f00eda10800000000000000
+      internalID: 1935985929446074354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_5
+      name: carpet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -232,16 +141,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 255dc14fe27202e43ae1e0cecdbf884e
-      internalID: -1391995145
+      spriteID: 768431c1035387460800000000000000
+      internalID: 7239594881743800423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_6
+      name: carpet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -254,38 +163,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2f0ff792b5904a847bb3210779effb19
-      internalID: 574932853
+      spriteID: 30cb30c9bb8616720800000000000000
+      internalID: 2837664395205786627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 194
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3c896e0c68cc3f4aa0ee77286d050a4
-      internalID: 386616273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_8
+      name: carpet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -300,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515e57670f2458a44ad9d0ea5e4f9738
-      internalID: 2049286992
+      spriteID: 0b0ec9d95c1d8124590f5e3b853132d7
+      internalID: 859263500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_9
+      name: carpet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -322,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ab3406ef1b4fac449d64f9dc938b8a6
-      internalID: 100400777
+      spriteID: ab3c8028da8d62f4aab37cbca87ee075
+      internalID: 1271267631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_10
+      name: carpet_5
       rect:
         serializedVersion: 2
         x: 128
@@ -344,36 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e9d22876924654c884e41133a4b0c7
-      internalID: 1725158430
+      spriteID: 5759ddd99a302d641b909bd2ca10cc4c
+      internalID: -1560772967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 130
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a091f8ea00cb744986eafac0ab3b5bb
-      internalID: 1606711255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_12
+      name: carpet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -388,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ac676a627e6904498b767e8807b1a52
-      internalID: 872859034
+      spriteID: 310521c75c757b040a14b92cf4e3f01c
+      internalID: 1480908013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_13
+      name: carpet_7
       rect:
         serializedVersion: 2
         x: 64
@@ -410,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d3c5e4a460eade409afd171f5267415
-      internalID: -1881002971
+      spriteID: 5e3c747f9cf99144fad1397b2151269a
+      internalID: 1996428713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_14
+      name: carpet_8
       rect:
         serializedVersion: 2
         x: 128
@@ -432,36 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f351b65fde431694c99d338d5cab97be
-      internalID: -228154537
+      spriteID: 3793fad8f65110345be5b265f7ea6ea3
+      internalID: -445361802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_15
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 66
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d88c7205a7b429947b2e375f99e86787
-      internalID: -166444519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_16
+      name: carpet_9
       rect:
         serializedVersion: 2
         x: 0
@@ -476,14 +319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d80139add0e32145be3063e27da9dd8
-      internalID: -572465580
+      spriteID: 4acbe0785733f794ea0ada22f0c8b489
+      internalID: -735269080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_17
+      name: carpet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -498,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b0eb081129fa14b8c7f1e28534dc2f
-      internalID: -389794461
+      spriteID: d0f75bfac3b2cf741b57d3036dd9ce37
+      internalID: 739400566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_home_18
+      name: carpet_11
       rect:
         serializedVersion: 2
         x: 128
@@ -520,30 +363,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b7b9f29927416a4994228feb6ed4809
-      internalID: -1853121172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_home_19
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 2
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4fb1e9f1a92e70438ba1e5881704643
-      internalID: 1161049936
+      spriteID: 23965f563ed5a4246ae6567ca113e809
+      internalID: 194363469
       vertices: []
       indices: 
       edges: []
@@ -552,7 +373,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a97c06ae2a323a41bef341830438be0
+    spriteID: 2fce285c7f70e9f41a9e4df44eef651b
     internalID: 0
     vertices: []
     indices: 
@@ -564,26 +385,18 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":62.0,"y":62.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":2.0,"y":2.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      level_home_0: -6743349854559868409
-      level_home_1: 1196293913896638601
-      level_home_10: 1725158430
-      level_home_11: 1606711255
-      level_home_12: 872859034
-      level_home_13: -1881002971
-      level_home_14: -228154537
-      level_home_15: -166444519
-      level_home_16: -572465580
-      level_home_17: -389794461
-      level_home_18: -1853121172
-      level_home_19: 1161049936
-      level_home_2: 3858359690930545433
-      level_home_3: 3475058541866809281
-      level_home_4: 864059367
-      level_home_5: -1391995145
-      level_home_6: 574932853
-      level_home_7: 386616273
-      level_home_8: 2049286992
-      level_home_9: 100400777
+      carpet_0: 1935985929446074354
+      carpet_1: 7239594881743800423
+      carpet_10: 739400566
+      carpet_11: 194363469
+      carpet_2: 2837664395205786627
+      carpet_3: 859263500
+      carpet_4: 1271267631
+      carpet_5: -1560772967
+      carpet_6: 1480908013
+      carpet_7: 1996428713
+      carpet_8: -445361802
+      carpet_9: -735269080
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
