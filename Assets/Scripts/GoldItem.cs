@@ -25,6 +25,7 @@ public class GoldItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Pickup_Coin);
             GameManager.Instance.AddGold(goldValue);
             Destroy(gameObject);
         }
