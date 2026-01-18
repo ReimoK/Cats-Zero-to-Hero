@@ -238,11 +238,21 @@ public class GameManager : MonoBehaviour
         WinGame();
     }
 
+    public void SaveTotalGold()
+    {
+        int savedGold = PlayerPrefs.GetInt("SavedGold", 0);
+
+        int newTotal = savedGold + totalGold;
+
+        PlayerPrefs.SetInt("SavedGold", newTotal);
+        PlayerPrefs.Save();
+
+        Debug.Log("Gold Saved! New Total: " + newTotal);
+    }
+
     public void WinGame()
     {
-        if (winPanel.activeSelf || losePanel.activeSelf) return;
-
-        Debug.Log("YOU WIN!");
+        SaveTotalGold();
         Time.timeScale = 0f;
         if (winPanel != null) winPanel.SetActive(true);
     }
@@ -250,6 +260,8 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         if (winPanel.activeSelf || losePanel.activeSelf) return;
+
+        SaveTotalGold();
 
         Debug.Log("GAME OVER!");
         Time.timeScale = 0f;

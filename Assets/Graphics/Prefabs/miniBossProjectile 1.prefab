@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1877972272887482823}
   - component: {fileID: 377335179059052044}
   m_Layer: 0
-  m_Name: BossProjectile
+  m_Name: miniBossProjectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 6954745026371188240, guid: fe530421a490c7a47807e995800c5066, type: 3}
+  m_Sprite: {fileID: 3547499809580997740, guid: a35337d36a984bf41ae67518b5fdee83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
