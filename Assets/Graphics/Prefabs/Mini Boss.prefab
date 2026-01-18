@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
   moveSpeed: 1.25
-  enemyProjectilePrefab: {fileID: 5463740370273534498, guid: 1bbac613b1f971c4ebf64620063d1b62, type: 3}
+  enemyProjectilePrefab: {fileID: 5463740370273534498, guid: 08dcadc7019914f4da6f4fbb774ee884, type: 3}
   fireRate: 2
   projectilesPerBurst: 12
   projectileSpeed: 3
