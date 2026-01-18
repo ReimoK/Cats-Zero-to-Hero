@@ -12,7 +12,9 @@ public class AudioManager : MonoBehaviour
         Mousetrap,
         Button_Click,
         Music_Menu,
-        Music_Battle
+        Music_Battle,
+        Pickup_Coin,
+        Pickup_XP
     }
 
     [System.Serializable]
@@ -32,6 +34,10 @@ public class AudioManager : MonoBehaviour
     private Dictionary<SoundType, Sound> _soundDictionary = new Dictionary<SoundType, Sound>();
 
     private AudioSource _musicSource;
+    private AudioSource _sfxSource;
+
+    // Track currently playing music base volume so slider changes apply correctly
+    private float _currentMusicBaseVolume = 1f;
 
     // Master volume controls (0..1)
     [Range(0f, 1f)] public float masterSfx = 1f;
@@ -57,16 +63,17 @@ public class AudioManager : MonoBehaviour
             _soundDictionary[s.Type] = s;
         }
 
-        // Create music source once
-        if (_musicSource == null)
-        {
-            _musicSource = gameObject.AddComponent<AudioSource>();
-            _musicSource.loop = true;
-        }
+        // Create sources once (persist across scenes)
+        _musicSource = gameObject.AddComponent<AudioSource>();
+        _musicSource.loop = true;
+
+        _sfxSource = gameObject.AddComponent<AudioSource>();
+        _sfxSource.loop = false;
 
         // Load saved volumes
         masterSfx = PlayerPrefs.GetFloat(SfxKey, 1f);
         masterMusic = PlayerPrefs.GetFloat(MusicKey, 1f);
+
         ApplyMusicVolume();
     }
 
@@ -75,7 +82,7 @@ public class AudioManager : MonoBehaviour
         return type == SoundType.Music_Menu || type == SoundType.Music_Battle;
     }
 
-    // Play one-shot SFX
+    // Play one-shot SFX (won't cut off when changing scenes)
     public void Play(SoundType type)
     {
         if (!_soundDictionary.TryGetValue(type, out Sound s))
@@ -84,24 +91,23 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Don’t let music types be played as one-shots
         if (IsMusic(type))
         {
             Debug.LogWarning($"{type} is music. Use ChangeMusic() instead.");
             return;
         }
 
-        var soundObj = new GameObject($"SFX_{type}");
-        var audioSrc = soundObj.AddComponent<AudioSource>();
+        if (s.Clip == null)
+        {
+            Debug.LogWarning($"Sound {type} has no clip assigned!");
+            return;
+        }
 
-        audioSrc.clip = s.Clip;
-        audioSrc.volume = s.Volume * masterSfx;
-        audioSrc.Play();
-
-        Destroy(soundObj, s.Clip.length);
+        // PlayOneShot allows overlapping SFX and continues through scene loads
+        _sfxSource.PlayOneShot(s.Clip, s.Volume * masterSfx);
     }
 
-    // Swap looping music track
+    // Swap looping music track (won't restart if same clip already playing)
     public void ChangeMusic(SoundType type)
     {
         if (!_soundDictionary.TryGetValue(type, out Sound track))
@@ -110,27 +116,28 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if (_musicSource == null)
+        if (track.Clip == null)
         {
-            _musicSource = gameObject.AddComponent<AudioSource>();
-            _musicSource.loop = true;
+            Debug.LogWarning($"Music track {type} has no clip assigned!");
+            return;
         }
 
         if (_musicSource.isPlaying && _musicSource.clip == track.Clip)
-            return;
+            return; // keep playing seamlessly
 
         _musicSource.clip = track.Clip;
-        _musicSource.volume = track.Volume * masterMusic;
+        _currentMusicBaseVolume = track.Volume;
+
+        ApplyMusicVolume();
         _musicSource.Play();
     }
 
     void ApplyMusicVolume()
     {
-        if (_musicSource != null && _musicSource.clip != null)
+        if (_musicSource != null)
         {
-            // Find the track volume from dictionary (optional but nice)
-            // If you want simplest, just set _musicSource.volume = masterMusic;
-            _musicSource.volume = masterMusic;
+            // Apply both the track’s base volume and the slider master volume
+            _musicSource.volume = _currentMusicBaseVolume * masterMusic;
         }
     }
 
@@ -145,11 +152,7 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float value01)
     {
         masterMusic = value01;
-
-        // Update currently playing music immediately
-        // If you want per-track base volume, keep track of it; simplest is:
-        if (_musicSource != null)
-            _musicSource.volume = masterMusic;
+        ApplyMusicVolume();
 
         PlayerPrefs.SetFloat(MusicKey, masterMusic);
         PlayerPrefs.Save();
