@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 129693274}
   - component: {fileID: 129693273}
   - component: {fileID: 129693272}
+  - component: {fileID: 129693275}
   m_Layer: 5
   m_Name: Select_2
   m_TagString: Untagged
@@ -279,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 129693273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1411948441}
+        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129693273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +331,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129693270}
   m_CullTransparentMesh: 1
+--- !u!114 &129693275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129693270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29231d7edf8cb9548803c7d2f80fd709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
+  sceneName: Level_garden
 --- !u!1 &375242542
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +950,7 @@ GameObject:
   - component: {fileID: 832305961}
   - component: {fileID: 832305960}
   m_Layer: 5
-  m_Name: Tom_name (1)
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1087,7 @@ GameObject:
   - component: {fileID: 890674279}
   - component: {fileID: 890674278}
   m_Layer: 5
-  m_Name: placeholder
+  m_Name: Select3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
