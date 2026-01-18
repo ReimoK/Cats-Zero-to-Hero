@@ -294,6 +294,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 375242547}
+        m_TargetAssemblyTypeName: LevelsMenuUI, Assembly-CSharp
+        m_MethodName: PlayGarden
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129693273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375242546}
   - component: {fileID: 375242545}
+  - component: {fileID: 375242547}
   - component: {fileID: 375242544}
   - component: {fileID: 375242543}
   m_Layer: 5
@@ -465,6 +478,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &375242547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375242542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd8132a8c191743b3bf9be3bca2b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelsMenuUI
+  streetButton: {fileID: 1411948438}
+  gardenButton: {fileID: 129693272}
+  homeButton: {fileID: 890674278}
+  gardenLockIcon: {fileID: 0}
+  homeLockIcon: {fileID: 0}
 --- !u!1 &380881473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1205,18 @@ MonoBehaviour:
       - m_Target: {fileID: 890674282}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375242547}
+        m_TargetAssemblyTypeName: LevelsMenuUI, Assembly-CSharp
+        m_MethodName: PlayHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2314,6 +2356,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1411948441}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375242547}
+        m_TargetAssemblyTypeName: LevelsMenuUI, Assembly-CSharp
+        m_MethodName: PlayStreet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

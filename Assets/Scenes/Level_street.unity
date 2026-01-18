@@ -5162,6 +5162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733366829}
   - component: {fileID: 1733366828}
+  - component: {fileID: 1733366830}
   - component: {fileID: 1733366827}
   m_Layer: 5
   m_Name: WinPanel
@@ -5230,6 +5231,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1733366830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733366826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8876fd4d0f079474691d22da6ba4f9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinContinue
+  unlockThisIndex: 1
+  sceneToLoad: levels_menu
 --- !u!1 &1746259122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,9 +5559,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951087718}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 1733366830}
+        m_TargetAssemblyTypeName: WinContinue, Assembly-CSharp
+        m_MethodName: OnContinuePressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
