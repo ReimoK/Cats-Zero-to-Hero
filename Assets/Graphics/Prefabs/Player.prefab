@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,12 +113,9 @@ MonoBehaviour:
   isMoving: 0
   catAnimators:
   - {fileID: 9100000, guid: 9f3fa2ff0a670344eaa37bf662191f80, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  catStaticSprites:
-  - {fileID: 0}
-  - {fileID: 5072762292325903353, guid: b77ca3477afb82f438ae9c458f0d2a88, type: 3}
-  - {fileID: -8908584347482326726, guid: b77ca3477afb82f438ae9c458f0d2a88, type: 3}
+  - {fileID: 22100000, guid: d5ea37e42aeb43642a94e60ce53adc9f, type: 2}
+  - {fileID: 22100000, guid: c15a1c1aed251ee4bb1213fcdab40291, type: 2}
+  catStaticSprites: []
 --- !u!114 &2200509544492851439
 MonoBehaviour:
   m_ObjectHideFlags: 0
