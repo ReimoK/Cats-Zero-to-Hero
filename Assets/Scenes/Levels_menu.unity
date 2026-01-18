@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 129693273}
   - component: {fileID: 129693272}
   - component: {fileID: 129693275}
+  - component: {fileID: 129693276}
   m_Layer: 5
   m_Name: Select_2
   m_TagString: Untagged
@@ -281,9 +282,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 129693275}
+      - m_Target: {fileID: 1084501119}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -344,6 +345,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
   sceneName: Level_garden
+--- !u!114 &129693276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129693270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1 &375242542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1101,7 @@ GameObject:
   - component: {fileID: 890674278}
   - component: {fileID: 890674281}
   m_Layer: 5
-  m_Name: Select_3
+  m_Name: Select3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1157,19 +1170,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 890674279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 890674281}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &890674279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,10 +1218,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 890674276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29231d7edf8cb9548803c7d2f80fd709, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
-  sceneName: Level_home
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1 &916262054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1795,7 @@ GameObject:
   - component: {fileID: 1184632975}
   - component: {fileID: 1184632974}
   m_Layer: 5
-  m_Name: Select3
+  m_Name: Placeholder_buy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,7 +1949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopManager
   totalGoldText: {fileID: 1002707351}
-  skins: []
+  skinPrice: 100
+  buyButton: {fileID: 0}
+  statusText: {fileID: 0}
 --- !u!4 &1231841612
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,6 +2055,7 @@ GameObject:
   - component: {fileID: 1297783626}
   - component: {fileID: 1297783625}
   - component: {fileID: 1297783628}
+  - component: {fileID: 1297783629}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -2187,6 +2190,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
   sceneName: main_title
+--- !u!114 &1297783629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297783623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1 &1411948436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,6 +2215,7 @@ GameObject:
   - component: {fileID: 1411948439}
   - component: {fileID: 1411948438}
   - component: {fileID: 1411948441}
+  - component: {fileID: 1411948442}
   m_Layer: 5
   m_Name: select1
   m_TagString: Untagged
@@ -2334,6 +2350,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
   sceneName: Level_street
+--- !u!114 &1411948442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411948436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1 &1520966743
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,6 +39,7 @@ public class XPGem : MonoBehaviour
         {
             if (GameManager.Instance != null)
             {
+                AudioManager.Instance.Play(AudioManager.SoundType.Pickup_XP);
                 GameManager.Instance.AddXP(xpValue);
             }
 

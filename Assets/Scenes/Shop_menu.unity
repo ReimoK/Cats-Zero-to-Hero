@@ -2121,6 +2121,7 @@ GameObject:
   - component: {fileID: 1297783626}
   - component: {fileID: 1297783625}
   - component: {fileID: 1297783628}
+  - component: {fileID: 1297783629}
   m_Layer: 5
   m_Name: return
   m_TagString: Untagged
@@ -2255,6 +2256,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
   sceneName: main_title
+--- !u!114 &1297783629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297783623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1 &1411948436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2280,7 @@ GameObject:
   - component: {fileID: 1411948440}
   - component: {fileID: 1411948439}
   - component: {fileID: 1411948438}
+  - component: {fileID: 1411948441}
   m_Layer: 5
   m_Name: bob
   m_TagString: Untagged
@@ -2389,6 +2403,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411948436}
   m_CullTransparentMesh: 1
+--- !u!114 &1411948441
 --- !u!1 &1446673374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2427,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411948436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
   m_GameObject: {fileID: 1446673374}
   m_Enabled: 1
   m_EditorHideFlags: 0
