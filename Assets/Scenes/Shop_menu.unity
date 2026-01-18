@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 129693273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1446673375}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129693273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 890674279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1446673375}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &890674279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2328,7 +2352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411948439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1446673375}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1411948439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,6 +2404,24 @@ CanvasRenderer:
   m_GameObject: {fileID: 1411948436}
   m_CullTransparentMesh: 1
 --- !u!114 &1411948441
+--- !u!1 &1446673374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446673376}
+  - component: {fileID: 1446673375}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1446673375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2379,6 +2433,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3ea8ec52e8d3c4abf412e16f73daa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
+  m_GameObject: {fileID: 1446673374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a04b1dce39a46849b0ad7457897915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopManager
+  totalGoldText: {fileID: 1002707351}
+  skins:
+  - skinName: Bob
+    price: 0
+    actionButton: {fileID: 1411948438}
+    buttonText: {fileID: 380881475}
+    isDefault: 1
+  - skinName: Tom
+    price: 300
+    actionButton: {fileID: 129693272}
+    buttonText: {fileID: 1084501121}
+    isDefault: 0
+  - skinName: Kitty
+    price: 500
+    actionButton: {fileID: 890674278}
+    buttonText: {fileID: 1184632974}
+    isDefault: 0
+--- !u!4 &1446673376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446673374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.77552, y: -1.63302, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520966743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,3 +3253,4 @@ SceneRoots:
   - {fileID: 916262057}
   - {fileID: 375242546}
   - {fileID: 2016895004}
+  - {fileID: 1446673376}
