@@ -2288,6 +2288,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8270235878303370106, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8381561684541675533, guid: c345347d0dd050c4181361cee6972fc8, type: 3}
       propertyPath: m_Name
       value: Player
